@@ -12,12 +12,14 @@ Header needed :
 &emsp;&emsp;Connection: Keep-alive  
 &emsp;&emsp;Host: \<ipOfYourTV\>:56790  
 
+note : from time to time, you can't send post request at your tv, just send a keep-alive GET again.  
+
 Response :  
 ```<?xml version="1.0"?><root xmlns="urn:schemas-upnp-org:device-1-0" xmlns:r="urn:restful-tv-org:schemas:upnp-dd"> <specVersion> <major>1</major> <minor>0</minor> </specVersion> <device> <deviceType>urn:schemas-upnp-org:device:tvdevice:1</deviceType> <friendlyName>HHW_HAIER_70:54:b4:a6:9a:ae</friendlyName> <manufacturer> </manufacturer> <modelName>Vestel_MB130 2018</modelName> <UDN>uuid:560c0fd8-d465-44e7-872a-abec457ffbce</UDN> </device> <locale> <name>HHW_HAIER</name> <is_3D_active>0</is_3D_active> <alexa_enabled >0</alexa_enabled > <browser_type>1</browser_type> <tv_version>MB130_VESTEL</tv_version> <software_version>5.7.10.0</software_version> <mac>70:54:B4:A5:E6:0E</mac> <dial_version>2.0</dial_version> <verificationKey>213</verificationKey> <quiUI>1</quiUI> </locale></root>```
 
 Now you can send command to your Haier tv like this :  
 
-Post request to :  
+POST request to :  
 &emsp;&emsp;http://\<ipOfYourTV\>:56789/apps/SmartCenter  
 Header :  
 &emsp;&emsp;Content-Type: text/plain  
